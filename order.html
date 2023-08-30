@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <script src="./order.js"></script>
+</head>
+<style>
+    .box{
+        border: 2px solid black;
+        height: 100px;
+        width: 400px;
+    }
+    .box1{
+        border: 1px solid crimson;
+        width: 300px;
+        height: 300px;
+        margin: 10px;
+        padding: 10px;
+        display: inline-block;
+    }
+</style>
+<body>
+    <form onsubmit = "order(event)">
+        <div>
+        <label for="size">
+            SIZE:
+            <select name="size" id="size">
+                <option value="small">Small</option>
+                <option value="medium">Medium</option>
+                <option value="large">Large</option>
+            </select>
+        </div>
+
+        <div>
+        </label>    
+        <label for="crust">
+            CRUST:
+            <select name="crust" id="crust">
+                <option value="thin">Thin</option>
+                <option value="thick">Thick</option>
+                <option value="stuffed">Stuffed</option>
+            </select>
+        </label>
+        </div>
+
+        <div>
+        <label for="sause">
+            SAUSE:
+            <select name="sause" id="sause">
+                <option value="tomato">Tomato</option>
+                <option value="bbq">BBQ</option>
+                <option value="spicy">Spicy</option>
+            </select>
+        </label>
+        </div>
+
+        <label for="qty">
+            QTY:
+            <input type="number" id="qty">
+        </label>
+
+        
+
+        <input type="submit" value="Order Pizza">
+    </form>
+    <div class = "box" id="box">
+
+    </div>
+    <div id ="printbill" class="box1">
+        SIZE:--<p id ="psize"></p>
+        CRUST:--<p id ="pcrust"></p>
+        SAUSE<p id ="psause"></p>
+        QTY<p id ="pqty"></p>
+        KM<p id ="pkm"></p>
+        TAX<p id ="ptax"></p>
+        TOTAL<p id ="ptotal"></p>
+    </div>
+    <button onclick="placeorder()">Place Order</button>
+</body>
+</html>
